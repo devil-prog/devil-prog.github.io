@@ -1,12 +1,19 @@
 <html>
 <body>
 
-<form action="devil-prog.github.io/welcome_get.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit">
-</form>
+<script>
+  var customerName = prompt("Please enter your name", "<name goes here>");
 
+  if (customerName!= null) {
+
+    document.getElementById("welcome").innerHTML =
+
+    "Hello " + customerName + "! How are you today?";
+
+}
+</script>
+  
+  
 </body>
 </html>
 #adding with simple php
