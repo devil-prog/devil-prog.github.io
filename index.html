@@ -1,10 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 <body>
-
-<form oninput="x.value=String(a.value)">
-  <input type="text" id="a" value="world"></br>
-  <h1>Hello <output name="x" for="a"></output></h1>
-</form>
   
+</body>
+</html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <title>devil-prog index</title>
+</head>
+
+<body class="mx-auto" style="width: 200px;">
+<h2>Just Try this</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Dom Toretto");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
 </body>
 </html>
