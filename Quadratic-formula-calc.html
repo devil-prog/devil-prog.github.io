@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic-formula-calc</title>
+</head>
+<body>
+    <form name="inputs" action="#" onsubmit="return calc()">
+        <label for="a">Enter a: </label>
+        <input type="text" id="a" value="">
+        <label for="b">Enter b: </label>
+        <input type="text" id="b" value="">
+        <label for="c">Enter c: </label>
+        <input type="text" id="c" value="">
+        <button type="submit">submit</button>
+    </form>
+    <div id="ans">answer goes here</div>
+<script>
+    function calc(){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
+
+        var i = b**2;
+        i = i-4*a*c;
+        i = i**0.5;
+
+        var x = -b+i;
+        x = x/(2*a);
+        //or
+        var y = -b-i;
+        y = y/(2*a);
+
+        document.getElementById("ans").innerHTML = x.toFixed(2) + "<br>" + y.toFixed(2);
+    }
+    //calc(-4,7,1,2)
+</script>
+    
+</body>
+</html>
