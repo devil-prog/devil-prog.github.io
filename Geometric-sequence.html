@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Geometric-sequence</title>
 </head>
 <body>
-    <h1>Working on</h1>
-    <!--
-    <form action="">
-        <label for=""></label>
-        <input type="text" name="" id="">
+    <div class="">
+        <form action="#" onsubmit="return calc()">
+        <div class="p-2"><label for="firstN">Enter first number:</label>
+            <input type="text" name="firstN" id="firstN"></div>
+        <div class="p-2"><label for="secondN">Enter second number</label>
+            <input type="text" name="secondN" id="secondN"></div>
+        <div class="p-2"><label for="thirdN">Enter third number</label>
+            <input type="text" name="thirdN" id="thirdN"></div>
+        <div class="p-2"><label for="elementN">Enter element number</label>
+            <input type="text" name="elementN" id="elementN"></div>
+        <button type="submit">submit</button>
+        </form>
+    <div>
+        <h2 id="answer">answer goes here</h2>
+    </div>
+    <script>
+        function calc(){
+            var i1 = document.getElementById("firstN").value;
+            var i2 = document.getElementById("secondN").value;
+            var i3 = document.getElementById("thirdN").value;
+            var i4 = document.getElementById("elementN").value;
 
-        <label for=""></label>
-        <input type="text" name="" id="">
+            i1 = parseFloat(i1);
+            i2 = parseFloat(i2);
+            i3 = parseFloat(i3);
+            i4 = parseFloat(i4);
 
-        <label for=""></label>
-        <input type="text" name="" id="">
-
-        <label for=""></label>
-        <input type="text" name="" id="">
-    </form>
--->    
+            if (i2/i1 == i3/i2){
+                var out = i1*((i2/i1)**(i4-1));
+                
+                document.getElementById("answer").innerHTML = out;
+            } else {
+                document.getElementById("answer").innerHTML = "Error";
+            }
+            }
+    </script>
+    <p class="fixed-bottom">still working on --CSS--</p>
 </body>
 </html>
