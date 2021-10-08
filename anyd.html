@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnyDownloader</title>
+</head>
+<body>
+    <input type="text" name="link" id="link">
+    <button type="button" onclick="checkInputValue();">Download</button>
+
+    <script>
+        function checkInputValue(){
+            var inputVal = document.getElementById("link").value;
+
+            if (inputVal.includes("://www.instagram.com")){
+                alert("instagram")
+            } else if (inputVal.includes("://youtu.be") || inputVal.includes("://www.youtube.com")){
+                alert("youtube")
+            } else {
+                alert("error!")
+            }
+            
+        }
+    </script>
+</body>
+</html>
