@@ -7,5 +7,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    window.location.href = `https://node-server.krishmikaabhish.repl.co:4000/download?URL=${URL}`;
+    window.location.href = `https://yt-download1001.herokuapp.com:4000/download?URL=${URL}`;
 }
