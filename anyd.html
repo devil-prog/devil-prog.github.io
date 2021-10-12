@@ -7,9 +7,13 @@
     <title>AnyDownloader</title>
 </head>
 <body>
-    <input type="text" name="link" id="link">
-    <button type="button" onclick="checkInputValue();">Download</button>
-
+    <input type="text" name="link" class="URL-input" id="link">
+    <button type="button" class="convert-button">Download</button>
+    <section class="result">
+        <p></p>
+    </section>
+    <script src="function.js"></script>
+    <!--
     <script>
         function checkInputValue(){
             var inputVal = document.getElementById("link").value;
@@ -18,11 +22,13 @@
                 alert("instagram")
             } else if (inputVal.includes("://youtu.be") || inputVal.includes("://www.youtube.com")){
                 alert("youtube")
+            /*} else if (inputVal.includes("://pin) {*/
             } else {
                 alert("error!")
             }
             
         }
     </script>
+-->
 </body>
 </html>
