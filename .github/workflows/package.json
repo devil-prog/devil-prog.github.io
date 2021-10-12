@@ -1,16 +1,19 @@
 {
   "name": "devil-prog.github.io",
   "version": "1.0.0",
-  "description": "downloader",
-  "main": "function.js",
+  "description": "server",
+  "main": "index.js",
   "scripts": {
-    "test": "run"
+    "test": "npm start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devil-prog/devil-prog.github.io.git"
   },
-  "author": "",
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "devil-prog (krizha)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devil-prog/devil-prog.github.io/issues"
