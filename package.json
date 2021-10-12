@@ -1,0 +1,24 @@
+{
+  "name": "devil-prog.github.io",
+  "version": "1.0.0",
+  "description": "downloader",
+  "main": "function.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devil-prog/devil-prog.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devil-prog/devil-prog.github.io/issues"
+  },
+  "homepage": "https://github.com/devil-prog/devil-prog.github.io#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ytdl-core": "^4.9.1"
+  }
+}
