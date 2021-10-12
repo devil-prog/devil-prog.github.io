@@ -5,7 +5,7 @@ convertBtn.addEventListener('click', () => {
     sendURL(URLinput.value);
 });
 function sendURL(URL) {
-    fetch(`http://localhost:4000/download?URL=${URL}`, {
+    fetch(`http://devil-prog.github.io:4000/download?URL=${URL}`, {
         method:'GET'
     }).then(res => res.json())
     .then(json => console.log(json));
