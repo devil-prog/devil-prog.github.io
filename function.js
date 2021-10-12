@@ -7,5 +7,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    window.location.href = `http://localhost:4000/download?URL=${URL}`;
+    window.location.href = `https://devil-prog.github.io:4000/download?URL=${URL}`;
 }
