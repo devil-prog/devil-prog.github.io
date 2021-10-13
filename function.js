@@ -7,7 +7,7 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    fetch(`https://sour-duck-17.loca.lt/download?URL=${URL}`, {
+    fetch(`https://WrithingMinorCones.krishmikaabhish.repl.com/download?URL=${URL}`, {
         method:'GET'
     }).then(res => res.json())
     .then(json => console.log(json));
