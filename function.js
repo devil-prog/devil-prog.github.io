@@ -7,5 +7,8 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    window.location.href = `https://devil-prog.github.io/download?URL=${URL}`;
+    fetch(`https://sour-duck-17.loca.lt/download?URL=${URL}`, {
+        method:'GET'
+    }).then(res => res.json())
+    .then(json => console.log(json));
 }
