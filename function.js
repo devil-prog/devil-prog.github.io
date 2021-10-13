@@ -7,8 +7,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    fetch(`http://WrithingMinorCones.krishmikaabhish.repl.com/download?URL=${URL}`, {
-        method:'GET'
-    }).then(res => res.json())
-    .then(json => console.log(json));
+    window.location.href = `http://localhost:4000/download?URL=${URL}`;
 }
