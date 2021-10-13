@@ -5,7 +5,7 @@ convertBtn.addEventListener('click', () => {
 
     console.log(`URL: ${URLinput.value}`);
     
-    if (URLinput.value.includes("://youtu.be") || URLinput.value.includes("://www.youtube.com")){
+    if (URLinput.value.includes("://youtu.be") || URLinput.value.includes("://www.youtube.com") || URLinput.value.includes("://youtube.com")){
         yturl(URLinput.value);
     } else {
         alert('WRONG URL!')
