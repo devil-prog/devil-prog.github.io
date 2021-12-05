@@ -10,7 +10,7 @@
     <div class="container-sm">
         <img src="maxresdefault.gif" alt="Quadratic-formula-image" width="75%" class="mx-auto d-block">
     </div>
-    <form name="inputs" action="#" onsubmit="return calc()">
+    <form name="inputs" action="#answer" onsubmit="return calc()">
         <div class="d-flex flex-column flex-md-row">
             <div class="mx-auto p-2">
                 <label for="a">Enter a: </label>
@@ -29,7 +29,7 @@
             </div>
         </div>
     </form>
-    <div class="d-flex justify-content-center"><h2 id="ans" class="text-center">answer goes here</h2></div>
+    <div class="d-flex justify-content-center py-5"><h2 id="ans" class="text-center">answer goes here</h2></div>
 <script>
     function calc(){
         var a = document.getElementById("a").value;
@@ -50,7 +50,11 @@
         var y = -b-i;
         y = y/(2*a);
 
-        document.getElementById("ans").innerHTML = x.toFixed(2) + "<br>" + "<i>or</i>" + "<br>"+ y.toFixed(2);
+        if (x == y){
+            document.getElementById("ans").innerHTML = x.toFixed(2)
+        } else {
+            document.getElementById("ans").innerHTML = x.toFixed(2) + "<br>" + "<i>or</i>" + "<br>"+ y.toFixed(2);
+        }
     }
     //calc(-4,7,1,2)
 </script>

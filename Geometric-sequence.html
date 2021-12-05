@@ -7,18 +7,27 @@
     <title>Geometric-sequence</title>
 </head>
 <body>
-    <div class="">
-        <form action="#" onsubmit="return calc()">
-        <div class="p-2"><label for="firstN">Enter first number:</label>
-            <input type="text" name="firstN" id="firstN"></div>
-        <div class="p-2"><label for="secondN">Enter second number</label>
-            <input type="text" name="secondN" id="secondN"></div>
-        <div class="p-2"><label for="thirdN">Enter third number</label>
-            <input type="text" name="thirdN" id="thirdN"></div>
-        <div class="p-2"><label for="elementN">Enter element number</label>
-            <input type="text" name="elementN" id="elementN"></div>
-        <button type="submit">submit</button>
-        </form>
+    <form action="#answer" onsubmit="return calc()">
+        <div class="d-flex flex-column flex-md-row">
+            <div class="p-2">
+                <label for="firstN">Enter first number:</label>
+                <input type="text" id="firstN" value="">
+            </div>
+            <div class="p-2">
+                <label for="secondN">Enter second number</label>
+                <input type="text" id="secondN" value="">
+            </div>
+            <div class="p-2">
+                <label for="thirdN">Enter third number</label>
+                <input type="text" id="thirdN" value="">
+            </div>
+            <div class="p-2">
+                <label for="elementN">Enter element number</label>
+                <input type="text" id="elementN" value="">
+            </div>
+            <button type="submit">submit</button>
+        </div>
+    </form>
     <div>
         <h2 id="answer">answer goes here</h2>
     </div>
