@@ -37,13 +37,15 @@
     <h4>my first game</h4>
     <script>
         var myGamePiece;
-        var score;
+        var MyScore;
         var apple;
+        var score = 0;
 
         function startgame() {
             myGameArea.start();
             myGamePiece = new component(30, 30, 'white', 50, 20)
-            apple = new component(20, 20, 'red', Math.floor(Math.random() * myGameArea.canvas.width), Math.floor(Math.random() * myGameArea.canvas.height))
+            apple = new component(30, 30, 'red', Math.floor(Math.random() * myGameArea.canvas.width), Math.floor(Math.random() * myGameArea.canvas.height - 20));
+            MyScore = new component("20px", "Consolas", 'black', 280, 20, "text");
         }
 
         var myGameArea = {
@@ -56,11 +58,15 @@
                 this.interval = setInterval(updateGameArea, 20);
             },
             clear: function () {
-                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            },
+            stop: function () {
+                clearInterval(this.interval);
             }
         }
 
-        function component(width, height, color, x, y) {
+        function component(width, height, color, x, y, type) {
+            this.type = type;
             this.width = width;
             this.height = height;
             this.x = x;
@@ -68,9 +74,15 @@
             this.speedX = 0;
             this.speedY = 0;
             this.update = function () {
-                ctx = myGameArea.context;
-                ctx.fillStyle = color;
-                ctx.fillRect(this.x, this.y, this.width, this.height)
+                if (this.type == "text") {
+                    ctx.font = this.width + " " + this.height;
+                    ctx.fillStyle = color;
+                    ctx.fillText(this.text, this.x, this.y);
+                } else {
+                    ctx = myGameArea.context;
+                    ctx.fillStyle = color;
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                }
             }
             this.newPos = function () {
                 this.x += this.speedX;
@@ -78,33 +90,41 @@
             }
         }
 
-        function updateGameArea() {
-            myGameArea.clear();
-            myGamePiece.newPos();
-
+        function crash() {
             if (myGamePiece.x == 481) {
-                myGamePiece.x = 0
+                myGamePiece.x = 0;
             } else {
                 if (myGamePiece.x == -20) {
-                    myGamePiece.x = 480
+                    myGamePiece.x = 480;
                 }
             }
 
             if (myGamePiece.y == myGameArea.canvas.height + 1) {
-                myGamePiece.y = -10
+                myGamePiece.y = -10;
             } else {
                 if (myGamePiece.y == -20) {
-                    myGamePiece.y = 280
+                    myGamePiece.y = 280;
                 }
             }
-            myGamePiece.update();
-            if (((apple.x < myGamePiece.x) && (myGamePiece.x < apple.x + 20)) || (apple.x < myGamePiece.x + 30 && (myGamePiece.x + 30 < apple.x + 20))) {
-                if (((apple.y < myGamePiece.y) && (myGamePiece.y < apple.y + 20)) || ((apple.y < myGamePiece.y + 30) && (myGamePiece.y + 30 < apple.y + 20))){
+
+            if (((apple.x < myGamePiece.x + 1) && (myGamePiece.x < apple.x + 31)) || (apple.x < myGamePiece.x + 31 && (myGamePiece.x + 30 < apple.x + 31))) {
+                if (((apple.y < myGamePiece.y + 1) && (myGamePiece.y < apple.y + 31)) || ((apple.y < myGamePiece.y + 31) && (myGamePiece.y + 30 < apple.y + 31))) {
                     apple.x = Math.floor(Math.random() * myGameArea.canvas.width);
                     apple.y = Math.floor(Math.random() * myGameArea.canvas.height);
+                    score += 1;
                 }
             }
+
+            MyScore.text = 'SCORE: ' + score;
+            myGamePiece.update();
+        }
+
+        function updateGameArea() {
+            myGameArea.clear();
+            myGamePiece.newPos();
+            crash();
             apple.update();
+            MyScore.update();
         }
 
         function moveup() {
