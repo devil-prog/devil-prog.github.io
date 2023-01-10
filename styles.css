@@ -1,0 +1,62 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(58, 58, 58);
+}
+
+.main {
+    width: 50%;
+    text-align: right;
+    color: white;
+    user-select: none;
+}
+
+.main h1 {
+    margin-right: -5px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.link-icon {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.link-icon img {
+    width: 40px;
+    margin: auto;
+}
+
+.projects {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.projects > a > button:hover{
+    cursor: pointer;
+}
+
+.projects > a > button{
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+.profilepic {
+    padding-left: 40px;
+}
+
+.profilepic img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin: 25vh 0 0 0;
+}
+
