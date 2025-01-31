@@ -1,19 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="my personal web page">
-    <meta name="keywords" content="Krishmika, Abhishek, krizh4, krizha, krishA, krish4">
-    <meta name="google-site-verification" content="q3_FHSCfk6o4rEFZCE9aFASu2kIFjvuhci6oQCVmlo0" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="my personal web page" />
+    <meta
+      name="keywords"
+      content="Krishmika, Abhishek, krizh4, krizha, krishA, krish4"
+    />
+    <meta
+      name="google-site-verification"
+      content="q3_FHSCfk6o4rEFZCE9aFASu2kIFjvuhci6oQCVmlo0"
+    />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>krizh4 | Krishmika Abhishek</title>
-</head>
+  </head>
 
-<body>
+  <body class="font-serif">
+    <!-- Nav Bar -->
+    <div class="flex flex-row justify-between m-6">
+      <div>Logo</div>
+      <div>
+        <ul class="flex flex-row">
+          <li class="pl-4"><a href="">Home</a></li>
+          <li class="pl-4"><a href="#recent_projects">Projects</a></li>
+          <li class="pl-4"><a href="#contact" onclick="openModal()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Inro -->
+    <div class="flex flex-row justify-center">
+        <div class="flex flex-row mx-6 max-w-[700px]">
+            <!-- Image -->
+            <div>
+                <img
+                src="https://avatars.githubusercontent.com/u/69952316?v=4"
+                alt="profile_picture"
+                class="border rounded-full"
+                />
+            </div>
+            <!-- Text -->
+            <div class="ml-5">
+                <h1 class="text-5xl">Krishmika Abhishek</h1>
+                <h2 class="text-2xl text-gray-500">Fullstack developer</h2>
+                <p class="pt-4">
+                Full-Stack Developer with expertise in MongoDB, Express.js, React,
+                and Node.js (MERN stack). I love building scalable, user-friendly,
+                and high-performance web applications that enhance user experience
+                and solve real-world problems. <br />
+                Always learning and staying updated with the latest web
+                technologies! Open to exciting projects and collaboration
+                opportunities.🚀
+                </p>
+                <!-- Socials -->
+    
+                <div class="pt-4">
+                <a href="#contact"><h1 class="hover:scale-105 transition ease-in-out">Contact me</h1></a>
+                </div>
+    
+                <div class="py-4 flex flex-row">
+                    <h1>Find me:</h1>
+                    <ul class="flex flex-row pl-2">
+                      <li><a href="">Facebook</a></li>
+                      <li><a href="">Instagram</a></li>
+                      <li><a href="">Github</a></li>
+                      <li><a href="">Youtube</a></li>
+                      <li><a href="">Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Projects -->
+    <div id="recent_projects" class="py-3 flex flex-col">
+      <div id="projects" class="flex flex-row justify-around">
+        <a href="" target="_blank">
+          <!-- 
+          Developer Purposes only
+
+          <div class="border-3 m-3 p-3 px-5 rounded-lg hover:scale-105 transition ease-in-out">
+            <div id="cover" class="relative">
+              <img src="project_cover.jpg" class="w-full h-full object-cover" alt="" srcset="">
+              <p class="absolute inset-0 flex justify-start text-white text-lg font-bold pl-5 pt-4">Hello World</p>
+            </div>
+            <h2 class="pt-1 text-xl">Hello World!</h2>
+            <p>No description available.</p>
+          </div>
+        </a>
+  
+        <div class="border-3 m-3 p-3 px-5 rounded-lg">
+          <img src="project_cover.jpg" alt="" srcset="">
+          <h2><a href="" target="_blank">Hello World!</a></h2>
+          <p>No description available.</p>
+        </div>
+  
+        <div class="border-3 m-3 p-3 px-5 rounded-lg">
+          <img src="project_cover.jpg" alt="" srcset="">
+          <h2><a href="" target="_blank">Hello World!</a></h2>
+          <p>No description available.</p>
+        </div> -->
+
+      </div>
+      <h4 class="text-lg self-end mx-6 hover:underline hover:decoration-solid transition ease-in-out"><a href="https://github.com/krizh4?tab=repositories" target="_blank"
+          rel="noopener noreferrer">find more in Github...</a></h4>
+    </div>
+        
+        <!-- Uncomment In Production cuz it only gives 60 reqest per hour -->
+        <script src="projects.js"></script>
+        
+        <!-- Contact Form -->
+        <div id="contact" class="flex flex-row justify-center">
+          <!-- Popup Button -->
+          <button onclick="openModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg mb-10">Contact me</button>
+
+          <!-- Popup model -->
+          <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black/50 hidden" onclick="closeModal(event)">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
+              <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSce2XbHMNhv_5TVZ6EKUDagOD_8MO2wSdwvFxVlpdtdZ5TzsA/viewform?embedded=true"
+              width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Close</button>
+            </div>
+        </div>
+        </div>
+
+    <!-- OLD DESIGN -->
+    <!-- 
     <div class="top">
         <div class="main">
             <h1>Hello There!</h1>
@@ -36,7 +156,6 @@
     </div>
     <div class="projects">
         <a href="/projects"><button>projects(oldindex)</button></a>
-    </div>
-</body>
-
+    </div> -->
+  </body>
 </html>
