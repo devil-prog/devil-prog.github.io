@@ -23,32 +23,32 @@
 
   <body class="font-serif">
     <!-- Nav Bar -->
-    <div class="flex flex-row justify-between m-6">
-      <div>Logo</div>
+    <div class="flex flex-col md:flex-row justify-between m-6">
+      <div class="text-xl font-bold hidden md:block"><a href="">krizh4 | Krishmika Abhishek</a></div>
       <div>
-        <ul class="flex flex-row">
+        <ul class="flex flex-row justify-center md:justify-start">
           <li class="pl-4"><a href="">Home</a></li>
-          <li class="pl-4"><a href="#recent_projects">Projects</a></li>
+          <li class="pl-4"><a href="#jp">Projects</a></li>
           <li class="pl-4"><a href="#contact" onclick="openModal()">Contact</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Main Inro -->
+    <!-- Main Intro -->
     <div class="flex flex-row justify-center">
-        <div class="flex flex-row mx-6 max-w-[700px]">
+        <div class="flex flex-col mx-6 max-w-[700px] md:flex-row">
             <!-- Image -->
-            <div>
+            <div class="self-center">
                 <img
                 src="https://avatars.githubusercontent.com/u/69952316?v=4"
                 alt="profile_picture"
-                class="border rounded-full"
+                class="border rounded-full max-w-[200px]"
                 />
             </div>
             <!-- Text -->
-            <div class="ml-5">
-                <h1 class="text-5xl">Krishmika Abhishek</h1>
-                <h2 class="text-2xl text-gray-500">Fullstack developer</h2>
+            <div class="ml-5 self-center">
+                <h1 class="text-5xl text-center md:text-left">Krishmika Abhishek</h1>
+                <h2 class="text-2xl text-gray-500 text-center md:text-left">Fullstack developer</h2>
                 <p class="pt-4">
                 Full-Stack Developer with expertise in MongoDB, Express.js, React,
                 and Node.js (MERN stack). I love building scalable, user-friendly,
@@ -61,27 +61,42 @@
                 <!-- Socials -->
     
                 <div class="pt-4">
-                <a href="#contact"><h1 class="hover:scale-105 transition ease-in-out">Contact me</h1></a>
+                  <a href="#contact"><h1 class="hover:text-sky-800">Contact me</h1></a>
                 </div>
     
                 <div class="py-4 flex flex-row">
-                    <h1>Find me:</h1>
+                    <h1 class="align-center">Find me:</h1>
                     <ul class="flex flex-row pl-2">
-                      <li><a href="">Facebook</a></li>
-                      <li><a href="">Instagram</a></li>
-                      <li><a href="">Github</a></li>
-                      <li><a href="">Youtube</a></li>
-                      <li><a href="">Linkedin</a></li>
-                    </ul>
+                      <li><a href="https://github.com/krizh4"><img class="w-[30px] mx-1" src="icons/logo_github.svg" alt="github logo" srcset=""></a></li>
+                      <li><a href="https://www.linkedin.com/in/krizh4/"><img class="w-[30px] mx-1" src="icons/logo_linkedin.svg" alt="linkedin logo" srcset=""></a></li>
+                      <li><a href="https://www.instagram.com/krizh.4/"><img class="w-[30px] mx-1" src="icons/logo_instagram.svg" alt="instagram logo" srcset=""></a></li>
+                      <li><a href="https://www.youtube.com/@krizh4"><img class="w-[30px] mx-1" src="icons/logo_yt.svg" alt="youtube logo" srcset=""></a></li>
+                      <li><a href=""><img class="w-[30px] mx-1 bg-black rounded-full p-1.5" src="icons/logo_tt.svg" alt="tiktok logo" srcset=""></a></li>
+                    </ul> 
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- released project pages -->
+     <h1 class="flex flex-row justify-center text-2xl text-center">Javascript frontend tools & apps</h1>
+     <div id="jp" class="flex flex-col md:flex-row justify-around m-6">
+      <!-- projects -->
+      <div class="p-3 my-1 border rounded-lg hover:bg-black hover:text-white transition ease-in-out">
+        <a href="/releases/Geometric-sequence/"><h1>Geometric Sequence</h1></a>
+      </div>
+      <div class="p-3 my-1 border rounded-lg hover:bg-black hover:text-white transition ease-in-out">
+        <a href="/releases/Quadratic-formula-calc/"><h1>Quadratic Formula Calculator</h1></a>
+      </div>
+      <div class="p-3 my-1 border rounded-lg hover:bg-black hover:text-white transition ease-in-out">
+        <a href="/releases/Snake-game/"><h1>Mini Snake Game</h1></a>
+      </div>
+     </div>
+
 
     <!-- Projects -->
     <div id="recent_projects" class="py-3 flex flex-col">
-      <div id="projects" class="flex flex-row justify-around">
+      <div id="projects" class="flex flex-col px-5 md:px-0 md:flex-row justify-around">
         <a href="" target="_blank">
           <!-- 
           Developer Purposes only
@@ -119,7 +134,7 @@
         <!-- Contact Form -->
         <div id="contact" class="flex flex-row justify-center">
           <!-- Popup Button -->
-          <button onclick="openModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg mb-10">Contact me</button>
+          <button onclick="openModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg mb-10 hover:scale-105">Contact me</button>
 
           <!-- Popup model -->
           <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black/50 hidden" onclick="closeModal(event)">
@@ -131,6 +146,8 @@
             </div>
         </div>
         </div>
+
+    <!-- Give Accesss for other pages -->
 
     <!-- OLD DESIGN -->
     <!-- 
